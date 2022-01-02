@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Office - Data Visualization</title>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Raleway:wght@200;300;500&family=Scheherazade+New&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    
+    <body>
+        <div id="container">
+            <div id="header">
+                <header>
+                    <h3 class="header">Visualizing the all time favorite series</h3>
+                    <h4 class="header">Data Visualization Project for ARTG 5330</h4>
+                    <h6 class="header"><i>by Mansi Khandpekar</i></h6>
+                </header>
+            </div>
+
+            <section id=subcontainer>
+
+                <section id="introduction">
+                    <div>
+                        <h1>Introduction</h1>
+                        <p>
+                            If I had to choose one TV show to watch for the rest of my life, I would pick <i>The Office</i>. No doubt. It's one of the best Comedy genre series out there.
+                        </p>
+                        <p>
+                            This webpage would try to find answers relating to the series with the help of data visualization and try to make sense of the patterns found in those visualizations. The narrative of the analysis goes from Micro to Macro, looking at the series's ranking compared to other series of the same and mix genre and then diving deep into more behind-the-scenes explorative questions. 
+                        </p>
+                        <p>
+                            Although The Office is a well known series and doesn't need an introduction, a small brief on the show would help the unaware navigate through the web page and might even encourage them to give the series a shot.
+                        </p>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="./images/giphy.gif" alt="Micheal Scott GIF">
+                            <figcaption>Source: GIPHY</figcaption>
+                        </figure>
+                    </div>
+                    <div id="about-show">
+                        <h1>About the show</h1>
+                            <p>
+                                The Office, is a well known American Mockumentary sitcom series that was aired on March, 2005. It portrays an Office setting and documents its employees day-to-day fictional life at a Paper company named Dunder Mifflin in Scranton, Pennsylvania. 
+                            </p>
+                            <p> 
+                                There are quite a few well established actors in the show like Steve Carell as Micheal Scott who is the manager of the Scranton Branch, and loves to annoy his employees and sometimes unintentionally offends them with his humor. There are quite a few characters in the show but we wouldn't want to spoil the fun for anyone now, do we? So let's begin with the data visualization...
+                            </p>
+                    </div>
+                </section>
+
+                <section id="main">
+                    <div id="nav-bar">
+                        <h3>Skip to</h3>
+                            <ul>
+                                <li><a href="#introduction">Introduction</a></li>
+                                <li><a href="#data-intro">Introduction to the data</a></li>
+                                <li><a href="#data">Visualizing and understanding the data</a></li>
+                                <li><a href="#fun-facts">Fun Facts </a></li>
+                            </ul>
+                    </div>  
+
+                    <div id="main-data">
+                        <div id="data-intro">
+                            <h1>Introduction to the Data Set</h1>
+                            <p>
+                                Two different data sets are used to support this data visualization project. Both are acquired from <a href="https://www.kaggle.com/"> Kaggle</a>, an online data science community where users can find and posts data sets. The following are the two data sets that are used :
+                            <p>
+                            <ol>
+                                <li> 
+                                    <a href="https://www.kaggle.com/amritvirsinghx/web-series-ultimate-edition" target="_blank"> Web Series : Ultimate Collection</a> curated by  <b><i>Amritvir Singh</i></b>.
+                                    <br>
+                                        The data was scrapped from IMDb, an online entertainment information database. It includes <b>'9 columns'</b>, or what is called as <b>'Variables'</b>. It has information such as the name of the series, the year the title was released, content rating, IMDb ratings, Rotten Tomato ratings, genre, number of seasons the series has, description and the platform its currently streaming on. Each variable has around <b>'12,000 rows'</b> or <b>'Observations'</b>. For the purpose of this project we will be using just the title and the ratings variable and its observations from this data set.
+                                </li>
+                                <br>
+                                <li> 
+                                    <a href="https://www.kaggle.com/nehaprabhavalkar/the-office-dataset" target="_blank"> The Office Dataset</a> curated by <b><i>Neha Prabhavalkar</i></b>. 
+                                    <br>
+                                    This data was also scrapped from IMDb. It's limited to the series itself and includes <b>'12 Variables'</b> and <b>'188 unique Observations'</b>. The variables are catagorized into seasons, episode title, description, individual episode ratings, votes and viewership count in USA for the said episode, guest star name (if any), duration of the episode, directors and the writers names. This data set would be used to explore more of the behind-the-scene questions I have about the series.
+                                </li>
+                            </ol>
+                        </div> 
+
+                        <section id="main-data-2">
+                            <div id="data">
+                                <h1>Visualizing and analyzing the data</h1>
+                                <figure id="gif-1">
+                                    <img src="./images/giphy2.gif">
+                                    <figcaption>Source: GIPHY</figcaption>
+                                </figure>
+                                <p class="data-1">
+                                    As mentioned in the <a href="#introduction">Introduction</a>, the purpose of this website is to find answers to explorative questions related to the series with the help of data visualization. The data sets introduced in the section above would play an important part in the visualization.
+                                </p>
+                                <p class="data-1">
+                                    To make this simpler to understand lets divide the visualization section into two parts according to the level of inspection. 
+                                    <ol class="data-1">
+                                        <li>The Office vs. other series - Macro level</li>
+                                        <li>Deep dive into The Office - Micro level</li>
+                                    </ol>
+                                </p>
+                            </div>
+                            <br>
+                            <div id="data1">
+                                <h2>The Office vs. other series</h2>
+                                    <p>
+                                        In this section we will compare The Office to 19 other popular TV shows in terms of IMDb ranking, both from a mix genre category and from comedy genre category.
+                                        <br>
+                                        Lets start with the mix genre category...
+                                    </p>
+
+                                <h3>Where does The Office stand in terms of ranking with 19 other popular TV shows? </h3>
+                                    <p> 
+                                        To visualize this, we will be using a simple horizontal bar graph. This diagram would be the most appropriate for this question as we are only concerned with 2 variables, the title and the overall IMDb ranking for the series.
+                                    </p>
+
+                                <figure>
+                                    <img src="./images/Viz Pngs/The Office v_s 20 best TV shows.png" alt="Bar graph for The Office vs. 19 best TV shows of all time" title="The Office vs. 19 best TV shows of all time" >
+                                    <!-- <figcaption>The Office v/s 19 best TV shows of all time</figcaption> -->
+                                </figure>
+                                    <p>
+                                        In the visualization above, the x-axis encodes the ratings for titles present in the y-axis. 
+                                        The 19 other tv shows are curated from an online top 20 list of must watch TV shows.
+                                        When we compare The office with these 19 popular TV shows, it ranks 5th sharing its place with Friends (1994), with 8.9/10 ratings on IMDb. The first 4 top rated series are as follows - Breaking Bad, Game of thrones, The Sopranos and Sherlock.
+                                    </p>
+                            </div>
+                            <br>
+                            <div id="data"> 
+                                <h3>Where does The Office stand in terms of ranking with 19 other popular Comedy TV shows? </h3>
+                                    <p> 
+                                        Since this question is similar to the one before, we would use a horizontal bar graph for this too. Again the variables are same as above with the only difference being the title having the same genre i.e. Comedy. The other 19 best comedy tv shows of all time is curated from <a href= "https://www.nytimes.com/interactive/2021/arts/television/best-tv-comedies-shows.html" >The New York Times 21 best comedies of the 21st Century</a>.
+                                    </p>
+                                    <figure>
+                                        <img src="./images/Viz Pngs/The Office v_s 21 Best Comedy series.png" alt="Bar graph for The Office vs. 19 best comedy TV shows" title="The Office vs. 19 best Comedy TV shows">
+                                    </figure>
+                                    <p>
+                                        In the Comedy category the Office ranks first with 8.9 IMDb ratings. A similar mockumentary called "Parks and Recreation" ranks 4th from top with a rating of 8.6/10.
+                                    </p>
+                                    <p>
+                                        In conclusion, I think its safe to say that The Office really is the most amazing (and Top rated) comedy series of all time.
+                                    </p>
+                            </div>
+                            <br>
+                            <div id="data"> 
+                                <h2>Deep dive into The Office</h2>
+                                    <p>
+                                        In this sections we will try to explore patterns in the viewership count in USA, Impact of celebrity appearance (if any) and find out how many of the actors also wrote and directed the episodes in the series.
+                                    </p>
+                                <h3>The Office viewer trend in the US. </h3>
+                                    <p>
+                                        To better understand the Viewership count in the US and explore any patterns in the count. The most appropriate visualization type for this would be a line chart.
+                                    </p>
+                                <figure>
+                                    <img src="./images/Viz Pngs/Seasons and avg viewer ship.png" alt="Line chart for average Viewership in US for each season" title="The average Viewership in US for each season">
+                                </figure>
+                                <p>
+                                    The average viewership for season 1 was 6.4 million. As the season progresses, the viewer count picks up reaching over 8.2 million viewers tuning in to watch the TV show. The upward trend continues till season 5, it being the most watched season having almost 8.8 million viewer count. It was also the longest running season out of the 9, consisting a total of 28 episodes.
+                                </p>
+                                <p>
+                                    After season 5 the graph follows a downward trend. By season 7 the average viewers dropped by 1.5 million reaching 7.3 million. After season 7 the count drops drastically reaching 5.4 million, lower than season 1. 
+                                    Season 7 is also the season where Steve Carell a.k.a Micheal Scott leaves the Office due to expiration of the contract. His absence can be one of the factor for the drop in viewers, him being the important central character in the series.<br>
+                                    By season 9, the viewership had reached the lowest of average viewer count of around 4.2 million.
+                                </p>
+                            </div>
+                            <br>
+                            <div id="data"> 
+                                <h3>Looking at celebrity appearances and their influence on viewership and ratings </h3>
+                                <p>
+                                    Like any popular series, The Office had a fair share of well known celebrity appearances.
+                                </p>
+                                <figure>
+                                    <img src="./images/Viz Pngs/Celebrity appearance..png" alt="Celebrity influence on viewership and ratings" title="Celebrity influence on viewership and ratings">
+                                </figure>
+                                <p>
+                                    The visualization above is called a matrix plot. 
+                                    The squares on the matrix is known as a square mark. The color and the size of the mark encodes the rating for the episode and the average viewercount respectively.
+                                </p>
+                                <p>
+                                    Amy Adams appeared twice in the show i.e. in episode 5 and episode 9.
+                                    According to the matrix plot, episode number 77 with Jack Black, Jessica Alba and Cloris Leachman had a total of around 23 million viewer count and was also the most rated (9.8) of the lot.
+
+                                </p>
+                            </div>
+                            <br>
+                            <div id="data"> 
+                                <h3>Actors who not only acted on the show but directed and wrote some of the episodes </h3>
+                                <p>
+                                    One of the most interesting fact that I came across while watching the Office was finding out many of the actors from the series, along with acting also wrote and directed a number of episodes. I have been curious ever since to find out who among the cast wrote and directed most of the episodes. To analyse this, the visualization we will be using is the scatter plot.
+                                </p>
+                                <figure>
+                                    <img src="./images/Viz Pngs/Writer and actor.png" alt="Treemap for actors who also wrote and directed the episodes" title="Actors who also wrote and directed the episodes">
+                                </figure>
+                                <p>
+                                    The Scatter plot has x-axis representing the number of episodes that the cast member has written and y-axis representing the number of episodes that the cast member has directed. The coor of the circle denotes the actors name and the number below the circles on the plot denotes the total number of episodes the actor has appeared in.
+                                </p>
+                                <p>
+                                    In conclusion, Mindy Kaling has written and directed most episodes out of the cast, while also acting in the series and Paul Lieberstein has directed most of the episodes amongst the lot.
+                                </p>
+                                <p>
+                                    John Krasinski and Rainn Wilson both have directed 2 episodes each while acting in all 201 episode.
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                </section>    
+
+                <section id="fun-facts"> 
+                    <div id="fact">
+                        <h2>Fun Fact #1</h2>
+                        <p>
+                            The computers on the Dunder Mifflin office set were wired for the internet. Cast members admitted that when they're in the background of scenes, they were often checking e-mail and surfing the net.
+                            <br>
+                            <i><a href="https://www.imdb.com/title/tt0386676/trivia/?ref_=tt_trv_trv">Source - IMDb Trivia</a></i>
+                            <br>
+                            <img src="images/giphy (1).gif" width= 250px >
+                        </p>
+                    </div>
+                    <div id="fact">
+                        <h2>Fun Fact #2</h2>
+                        <p>
+                            Four of the regularly appearing secondary characters have the same first name as the actress or actor who plays her or him: Angela (Angela Kinsey), Oscar (Oscar Nuñez), Phyllis (Phyllis Smith), and Creed (Creed Bratton). Interestingly, Creed shares his entire name (and a large chunk of his history) with his character. They are both called "Creed Bratton".
+                            <br>
+                            <i><a href="https://www.imdb.com/title/tt0386676/trivia/?ref_=tt_trv_trv">Source - IMDb Trivia</a></i>
+                        </p>
+                    </div>
+                    <div id="fact">
+                        <h2>Fun Fact #3</h2>
+                        <p>
+                            For their goodbye scene at the airport in Carell’s last episode, Jenna Fischer was told by production to, “Just say whatever you would want to say to Steve. Just say goodbye and we'll tape it and when you're finished, just give each other a hug and go your separate ways.’” Fischer later revealed in 2018 that, “Those were real tears and a real goodbye.”
+                            <br>
+                            <i><a href="https://www.mentalfloss.com/article/60370/21-things-you-might-not-have-known-about-office">Source - Meredith Danko for MentalFloss</a></i> 
+                        </p>
+                    </div>
+                    <div id="fact">
+                        <h2>Fun Fact #4</h2>
+                        <p>
+                            Netflix's most streamed show of 2020.
+                            <br>
+                            <i><a href="https://www.imdb.com/title/tt0386676/trivia/?ref_=tt_trv_trv">Source - IMDb Trivia</a></i>
+                            <br>
+                            <img src="images/giphy (2).gif" width= 250px >
+                        </p>
+                    </div>
+                </section>
+
+            </section>
+            
+            <button type="button"><a href="#introduction">Back to top</a></button>
+
+            <footer>
+                <h5 class="header"> Created for ARTG 5330. Mini Project 1. Created on 27th October 2021</h5>
+            </footer>
+
+        </div>
+    </body>
+</html>
