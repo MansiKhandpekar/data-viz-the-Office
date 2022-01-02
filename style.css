@@ -1,0 +1,125 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0px 30px;
+}
+
+div#container {
+    height: 200vh;
+    max-height: 200vh;
+    overflow: hidden;
+}
+
+figure#chart {
+    position: relative;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 5px rgba(183, 183, 248, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.tooltip {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+    font-family: 'Karla', sans-serif;
+    font-size: 11pt;
+    background-color:rgba(240, 240, 240, 0.795);
+    border-radius: 3px;
+    box-shadow: 2px 2px 1px 1px rgba(183, 183, 248, 0.3);
+    padding: 10px;
+    pointer-events: none;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Spectral';
+}
+
+h3, h4 {
+    margin: 10px 0px;
+}
+
+h2, h4, p {
+    margin: 5px 0px;
+    padding: 0px 50px 0px 50px;
+    text-align: justify;
+}
+
+p, li {
+    font-family: "Karla";
+}
+
+#header {
+    position: relative;
+    background-color: rgba(183, 183, 248, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+ul {
+    padding: 0px 80px 0px 120px;
+    margin: 0px;
+}
+
+p b {
+    color: crimson;
+}
+
+button{
+    transition:all .5s ease-in-out;
+    font-family: "Karla";
+    border: none;
+    padding: 5px 15px;
+    margin: 0px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #414141;
+    font-weight: 900;
+}
+
+#MH {
+    background-color: #cae7d8;
+}
+#OD{
+    background-color: #edf7d7;
+}
+#KA{
+    background-color: #d7ddeb;
+}
+#KL{
+    background-color: #f7d8c0;
+}
+#UP{
+    background-color: #f1d6e8;
+}
+
+button:hover {
+    color:aliceblue;
+}
+
+button:focus {
+    background:rgb(107, 107, 107);
+    color:aliceblue;
+}
+
+img {
+    position: relative;
+    width: 30%;
+}
